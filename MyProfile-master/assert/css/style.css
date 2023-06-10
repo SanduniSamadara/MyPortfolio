@@ -1,0 +1,63 @@
+/*
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic"   ;
+
+}
+
+ul{
+    list-style-type: none;
+    float: right;
+    margin-top:25px;
+}
+
+ul li{
+    display: inline-block;
+}!**!
+
+ul li a{
+    text-decoration:none;
+    color: rgba(10, 21, 62, 0.57);
+    padding: 5px 20px;
+    border:1px solid rgba(10, 21, 62, 0.57);
+    transition: 0.6s ease;
+
+}*/
+#navBar{
+    margin-top:0;
+    float: left;
+
+}
+#navBar ul{
+    position: relative;
+    padding: 0;
+    right: 20px;
+    list-style: none;
+    float: right;
+    margin-top:25px;
+
+}
+#navBar li{
+
+    display: inline-block;
+    padding: 0px 10px;
+    cursor: pointer;
+
+}
+
+#navBar a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+
+
+li>i{
+    position: relative;
+    bottom: 38px;
+    right:30px;
+}

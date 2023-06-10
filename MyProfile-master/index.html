@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="Samadara Munasinghe" name="author">
+    <meta content="Samadara's website" name="description">
+    <meta content="https://developer.mozilla.org/static/img/opengraph-logo.png" property="og:image"/>
+    <meta content="Hello I'm Samadara Web Developer @ IJSE."
+          property="og:description"/>
+    <meta content="Samadara's web" property="og:title"/>
+
+
+    <title>Samadara</title>
+    <link href="assert/css/style.css" rel="stylesheet" type="text/css">
+    <link href="assert/css/preloader.css" rel="stylesheet" type="text/css">
+
+    <!--    import animate.css-->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+            rel="stylesheet"
+    />
+
+    <!--AOS animate-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+
+        #navigation {
+            background-image: linear-gradient(to right top, #464747, #30363c, #19232b, #232222, #372c63);
+            width: 3000px;
+            height: 100px;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            margin: 0;
+
+        }
+
+        body {
+            margin: 0;
+            /* background-image: linear-gradient(to right top, #2f2615, #372d1b, #3e3522, #463c29, #4e4430, #48432f, #42412f, #3d3f2f, #2c3328, #1e2621, #141a18, #090a0a); */
+            /*background-image: linear-gradient(to right top, #252c49, #092938, #191d30, #0c1d2d, #445d0c);*/
+            color: #f5eeee;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 16px;
+        }
+
+
+        #navbar {
+            margin-top: 0;
+            float: left;
+        }
+
+        #navbar ul {
+            position: relative;
+            padding: 0;
+            right: 20px;
+            list-style: none;
+
+        }
+
+        #navbar li {
+
+            display: inline-block;
+            padding: 0px 10px;
+            cursor: pointer;
+
+        }
+
+        #navbar a {
+            color: #e9e3e5;
+            text-decoration: none;
+            font-size: 17px;
+            cursor: pointer;
+
+        }
+
+        #navbar a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+
+        li > i {
+            position: relative;
+            bottom: 38px;
+            right: 30px;
+        }
+
+        #home {
+            background-image: linear-gradient(to right top, #343435, #171919, #101822, #110606, #0c0f11);
+            /*width: 100%;*/
+            height: 100vh;
+            position: relative;
+            /*display: flex;*/
+        }
+
+        main > section > div {
+            position: relative;
+            width: 450px;
+            height: 580px;
+            bottom: 230px;
+
+        }
+
+        .myImage {
+            position: relative;
+            top: 20px;
+            border: 3px rgba(255, 255, 255, 0.79) solid;
+            right: 16px;
+
+        }
+
+        #txt {
+            font-family: "Brush Script MT";
+            color: #f0f1f4;
+        }
+
+
+        .h1 {
+            color: #d4c2cf;
+        }
+
+
+        #button {
+            width: 100px;
+            position: absolute;
+            background-color: rgba(223, 196, 227, 0.97);
+            color: #05472c;
+            padding: 10px 20px;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+            display: block;
+        }
+
+        #button:hover {
+            background-color: #113161;
+            color: #fff;
+
+        }
+
+        #fixed-whatsapp {
+            position: fixed;
+            top: 300px;
+            right: 0;
+            display: block;
+
+        }
+
+
+        #fixed-facebook {
+            position: fixed;
+            top: 350px;
+            right: 0;
+            display: block;
+
+        }
+
+        #fixed-linkedin {
+            position: fixed;
+            top: 400px;
+            right: 0;
+            display: block;
+
+        }
+
+        #fixed-github {
+            position: fixed;
+            top: 450px;
+            right: 0;
+            display: block;
+
+        }
+
+        /*============================================about====================================*/
+
+        #about {
+            background-image: linear-gradient(to right top, #464747, #050e18, #0c0f11, #110606, #372c63);
+            /*width: 100%;*/
+            height: 100vh;
+            position: relative;
+            top: -5vh;
+        }
+
+        .aboutImg {
+            width: 200px;
+            height: 300px;
+        }
+
+        /* .hireMe{
+             position: absolute;
+             top: 230px;
+             left:30px;
+             width: fit-content;
+             z-index: inherit;
+         }*/
+
+        .sub-title{
+            font-size: 60px;
+            font-weight: 600;
+            color: #fff;
+            left: 20vw;
+            position: absolute;
+        }
+
+        .hireMe {
+
+            display: inline-block;
+            position: absolute;
+            background-color: #173c22;
+            color: #888080;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-weight: bold;
+            border: 3px #fff solid;
+
+
+            /* Animation */
+            animation: hireMe;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation-delay: 3s;
+
+            /* Transition */
+            /*  transition-property: transform, backgorund-color, color;
+              transition-duration: 1s, 2s, 1s;*/
+
+
+        }
+
+        .hireMe:hover {
+            transform: scaleX(1.15) scaleY(1.15);
+            background-color: #ffffff;
+            color: #000000;
+            border: 3px #000000 solid;
+            font-weight: bold;
+        }
+
+
+        .row{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .about-col-1{
+            flex-basis: 35%;
+        }
+        .about-col-1 img{
+            width: 70%;
+            border-radius: 15px;
+        }
+        .about-col-2{
+            flex-basis: 70%;
+        }
+        .sub-title{
+            font-size: 60px;
+            font-weight: 600;
+            color: #fff;
+
+        }
+        .tab-titles{
+            display: flow;
+            margin: 20px 0 40px;
+        }
+
+
+
+        /*============================================skill====================================*/
+
+        #skill {
+            background-image: linear-gradient(to right top, #343435, #171919, #101822, #110606, #0c0f11);
+            /*width: 100%;*/
+            height: 100vh;
+            position: relative;
+            top: -10vh;
+
+        }
+
+        /*============================================education====================================*/
+
+
+        #education {
+            background-image: linear-gradient(to right top, #464747, #050e18, #0c0f11, #110606, #372c63);
+            /*width: 100%;*/
+            height: 100vh;
+            position: relative;
+            top: -15vh;
+        }
+
+        /*============================================gallery====================================*/
+
+
+        #gallery {
+            background-image: linear-gradient(to right top, #343435, #171919, #101822, #110606, #0c0f11);
+            /*width: 100%;*/
+            height: 100vh;
+            position: relative;
+            top: -20vh;
+        }
+
+        #slider {
+            position: relative;
+            width: 50%;
+            height: 32vw;
+            margin: 150px auto;
+            font-family: 'Helvetica Neue', sans-serif;
+            perspective: 1400px;
+            transform-style: preserve-3d;
+        }
+
+        input[type=radio] {
+            position: relative;
+            top: 108%;
+            left: 50%;
+            width: 18px;
+            height: 18px;
+            margin: 0 15px 0 0;
+            opacity: 0.4;
+            transform: translateX(-83px);
+            cursor: pointer;
+        }
+
+        input[type=radio]:nth-child(5) {
+            margin-right: 0px;
+        }
+
+        input[type=radio]:checked {
+            opacity: 1;
+        }
+
+        #slider label,
+        #slider label img {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            left: 0;
+            top: 0;
+            color: white;
+            font-size: 70px;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 400ms ease;
+        }
+
+        /* Slider Functionality */
+        /* Active Slide */
+        #s1:checked ~ #slide1,
+        #s2:checked ~ #slide2,
+        #s3:checked ~ #slide3,
+        #s4:checked ~ #slide4 {
+            box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
+            transform: translate3d(0%, 0, 0px);
+        }
+
+        /* Next Slide */
+        #s1:checked ~ #slide2,
+        #s2:checked ~ #slide3,
+        #s3:checked ~ #slide4,
+        #s4:checked ~ #slide1 {
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+            transform: translate3d(20%, 0, -100px);
+        }
+
+        /* Next to Next Slide */
+        #s1:checked ~ #slide3,
+        #s2:checked ~ #slide4,
+        #s3:checked ~ #slide1,
+        #s4:checked ~ #slide2 {
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+            transform: translate3d(40%, 0, -250px);
+        }
+        /* Previous to Previous Slide */
+        #s1:checked ~ #slide3,
+        #s2:checked ~ #slide4,
+        #s3:checked ~ #slide1,
+        #s4:checked ~ #slide2 {
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+            transform: translate3d(-40%, 0, -250px);
+        }
+
+        /* Previous Slide */
+        #s1:checked ~ #slide4,
+        #s2:checked ~ #slide1,
+        #s3:checked ~ #slide2,
+        #s4:checked ~ #slide3 {
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+            transform: translate3d(-20%, 0, -100px);
+        }
+
+        /*#certificatesH3 {
+            margin: auto;
+            position: relative;
+            right: 630px;
+            width: fit-content;
+            top: 250px;
+            padding: 25px;
+            font-size: 20px;
+        }*/
+
+        /*============================================projects====================================*/
+
+        #project {
+            background-image: linear-gradient(to right top, #464747, #050e18, #0c0f11, #110606, #372c63);
+            /*width: 100%;*/
+            height: 100vh;
+            position: relative;
+            top: -30vh;
+        }
+
+        /*============================================activities====================================*/
+
+        #activities {
+            background-image: linear-gradient(to right top, #343435, #171919, #101822, #110606, #0c0f11);
+            /*width: 100%;*/
+            height: 130vh;
+            position: relative;
+            top: -37vh;
+        }
+
+        /*============================================assignment====================================*/
+
+        #assignment {
+            background-image: linear-gradient(to right top, #464747, #050e18, #0c0f11, #110606, #372c63);
+            /*width: 100%;*/
+            height: 100vh;
+            position: relative;
+            top: -45vh;
+        }
+
+        /*============================================contact====================================*/
+
+        #contact {
+            background-image: linear-gradient(to right top, #343435, #171919, #101822, #110606, #0c0f11);
+            /*width: 100%;*/
+            height: 130vh;
+            position: relative;
+            top: -50vh;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!--<div id="preloader">
+    <img src="MyProfile-master/assert/images/Spinner-1s-200px.gif" alt="">
+</div>-->
+
+
+<div align="right">
+
+    <!-- <nav id="navBar">
+
+             <a href="#m1">Home</a>|
+             <a href="#m2">About</a>|
+             <a href="#m3">Skills</a>|
+             <a href="#m4">Education</a>|
+             <a href="#m5">Gallery</a>|
+             <a href="#m6">Projects</a>|
+             <a href="#m7">Activities</a>|
+             <a href="#m8">Assignments</a>|
+             <a href="#m9">Contact</a>|
+
+     </nav>-->
+
+    <section id="navigation">
+        <nav id="navbar">
+            <ul>
+                <li><a href="#m1"><h3>Home</h3></a></li>
+                <li><a href="#m2"><h3>About Me</h3></a></li>
+                <li><a href="#m3"><h3>Skills</h3></a></li>
+                <li><a href="#m4"><h3>Education</h3></a></li>
+                <li><a href="#m5"><h3>Gallery</h3></a></li>
+                <li><a href="#m6"><h3>Projects</h3></a></li>
+                <li><a href="#m7"><h3>Activities</h3></a></li>
+                <li><a href="#m8"><h3>Assignments</h3></a></li>
+                <li><a href="#m9"><h3>Contact</h3></a></li>
+            </ul>
+        </nav>
+    </section>
+</div>
+
+<br><br>
+
+<hr>
+<section id="home">
+
+
+    <h2 id="m1">Home</h2><br><br>
+
+    <img align="right"
+         alt="" class="myImage" src="assert/images/WhatsApp Image 2023-02-20 at 19.21.18.jpg" width="150">
+
+    <div align="center">
+        <h1 id="txt"><font size="10">Hey there!</font></h1>
+        <h1 class="h1"><font size="10">I’m Samadara Munasinghe</font></h1>
+        <font class="h1" size="10">A SOFTWARE ENGINEER IN SRI LANKA</font>
+    </div>
+    <div align="center">
+        <B> Software developer,</B><br>
+        <B> Software developer,</B><br>
+        <B> UI/UX Designer</B><br>
+        </p>
+    </div>
+
+    <!-- <div align="center">
+         <a href="https://web.facebook.com/profile.php?id=100079511863327">
+             <img src="assert/images/facebook (1).png" alt="facebook" width="30"></a>
+
+         <a href="https://wa.me/+94742820784">
+             <img src="assert/images/whatsapp (1).png" alt="whatsapp" width="30"></a>
+
+
+         <a href="https://github.com/SanduniSamadara">
+             <img src="assert/images/github(1).png" alt="github" width="30"></a>
+
+         <a href="https://www.linkedin.com/in/sanduni-samadara-57ba61240/">
+             <img src="assert/images/linkedin (1).png" alt="linkedin" width="30"></a>
+         <br><br>
+     </div>
+ -->
+    <article class="socialMedia">
+        <div align="center">
+            <a href="https://web.facebook.com/profile.php?id=100079511863327">
+                <img alt="facebook" id="button fixed-facebook" src="assert/images/facebook (1).png" width="30"></a>
+
+            <a href="https://wa.me/+94742820784">
+                <img alt="whatsapp" id="button fixed-whatsapp" src="assert/images/whatsapp (1).png" width="30"></a>
+
+
+            <a href="https://github.com/SanduniSamadara">
+                <img alt="github" id="button fixed-github" src="assert/images/github(1).png" width="30"></a>
+
+            <a href="https://www.linkedin.com/in/sanduni-samadara-57ba61240/">
+                <img alt="linkedin" id="button fixed-linkedin" src="assert/images/linkedin (1).png" width="30"></a>
+        </div>
+
+
+    </article>
+</section>
+
+<section id="about">
+    <h2 id="m2">About</h2><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img data-aos="zoom-in-right" align="center" alt="About" class="animate__animated animate__bounce animate__infinit"
+                     src="assert/images/WhatsApp Image 2023-02-20 at 20.50.38.jpg">
+                <div align="center">
+            </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title" data-aos="zoom-in">-Who am I,</h1>
+                    <p data-aos="zoom-in-right">Hello , I am Samadara Munasinghe from Sri Lanka . </p>
+                    <p data-aos="zoom-in-right" class="tab-titles">I’m currently learning more about software engineering. I have been doing two years of training with
+                        IJSE for that.I also have knowledge of web development,
+                        UI/UX designing, database management and frameworks. Contact me to get the service you need in these areas
+                        creatively,efficiently and cleanly. Also if you want to receive a service in a friendly manner,please
+                        contact
+                        me.</p> <br><br>
+                </div>
+        </div>
+    </div>
+        <input class="hireMe" type="button" value="Hire me"/><br><br><br><br><br>
+
+    </div>
+</section>
+
+
+<section id="skill">
+
+
+    <h2 id="m3">Skills</h2><br>
+
+    <div align="center">
+
+        <h3> -What I know,
+            <br>
+            I have been successfully completing number of projects in the above areas for over two years and have
+            received
+            good feedbacks.
+        </h3>
+    </div>
+
+    <br><br>
+
+    <div align="center">
+        <img alt="Java" class="animate__animated animate__shakeY" src="assert/images/JAVAA.jpg" width="300">
+
+        <img alt="MySql" class="animate__animated animate__shakeY" src="assert/images/mysql.jpg" width="300">
+
+        <img alt="html" class="animate__animated animate__shakeY" src="assert/images/html.jpg" width="300">
+
+        <img alt="css" class="animate__animated animate__shakeY" src="assert/images/css.jpg" width="300">
+
+        <img alt="JavaFX" class="animate__animated animate__shakeY" src="assert/images/javafx.webp" width="300"><br><br>
+
+        <img alt="JavaScript" class="animate__animated animate__shakeY" src="assert/images/javaScript.png" width="300">
+
+    </div>
+
+</section>
+
+<section id="education">
+    <h2 id="m4">My Education</h2><br><br>
+
+    <div align="center">
+
+        <h3>Higher Education <h4> -Institute of Java and Software Engineering[since 2022]</h4></h3>
+        <br>
+        <h3>Secondary School <h4> -Wayamba Royal College[2011 - 2020]</h4></h3>
+        <br>
+        <h3>Primary School <h4> -Daladagama Primary School[2007 - 2010]</h4></h3>
+    </div>
+
+
+</section>
+
+<section id="gallery">
+    <h2 id="m5">Gallery</h2>
+
+    <div id="slider">
+
+        <input checked id="s1" name="slider" type="radio">
+        <input id="s2" name="slider" type="radio">
+        <input id="s3" name="slider" type="radio">
+        <input id="s4" name="slider" type="radio">
+        <input id="s5" name="slider" type="radio">
+
+        <label for="s1" id="slide1"><img alt="" src="assert\images\WhatsApp Image 2023-02-20 at 19.21.36.jpg"></label>
+        <label for="s2" id="slide2"><img alt="" src="assert\images\WhatsApp Image 2023-02-20 at 22.37.00.jpg"></label>
+        <label for="s3" id="slide3"><img alt="" src="assert\images\WhatsApp Image 2023-02-20 at 22.42.13.jpg"></label>
+        <label for="s4" id="slide4"><img alt="" src="assert\images\WhatsApp Image 2023-02-20 at 22.39.30.jpg"></label>
+
+
+    </div>
+
+</section>
+
+
+<section id="project">
+
+    <h2 id="m6">Projects</h2>
+
+    <div align="center">
+        <a href="https://github.com/SanduniSamadara/Final/commit/c25b7fa66207f917ed1a710383013e9fe9f66e33">
+            <img alt="project" src="assert\images\1st.png" width="300"></a><br><br>
+        <B>Vehicle Rental System</B><br><br>
+    </div>
+
+    <div align="center">
+        <a href="https://github.com/SanduniSamadara/HostalManagementSystem">
+            <img alt="project" src="assert/images/Hotel.jpg" width="300"></a><br><br>
+        <B>Hostel Management System</B><br><br><br><br>
+        <input type="button" value="see more"><br><br>
+    </div>
+
+</section>
+
+
+<section id="activities">
+    <h2 id="m7">Activities</h2>
+
+    <div align="center">
+        <img alt="Travelling" src="assert\images\download (1).jpg" width="100">
+        <h4>Travelling</h4>
+        <img alt="Music" src="assert\images\music.jpg" width="100">
+        <h4>Music</h4>
+        <img alt="Graphic Designing" src="assert\images\images.jpg" width="100">
+        <h4>Graphic Designing</h4>
+        <img alt="Creating videos" src="assert\images\vedio.png" width="100">
+        <h4>Creating videos</h4>
+    </div>
+
+</section>
+
+
+<section id="assignment">
+
+    <h2 id="m8">Assignments</h2>
+
+    <div align="center">
+        <a href="https://docs.google.com/document/d/1UFuIV7ddT_yP3u38zCPiG0Bhj9_l05yeEAvYnkqxOL8/edit">
+            <img alt="Assignment" src="assert/images/assignment2.jpg" width="150"></a>
+
+        <a href="https://sandunisamadara.github.io/MyProfile/">
+            <img alt="Assignment" src="assert/images/assignment4.jpg" width="150"></a><br><br><br><br>
+
+        <a href="https://github.com/SanduniSamadara/Assignment03">
+            <img alt="Assignment" src="assert/images/assignment5 png.jpg" width="150"></a>
+
+        <a href="https://github.com/SanduniSamadara/CSS-Assingment4.git">
+            <img alt="Assignment" src="assert/images/assignment6.jpg" width="150"></a><br><br><br><br>
+
+        <a href="file:///D:/Internet%20Technology/Assignments/05/index.html">
+            <img alt="Assignment" src="assert/images/assignment6 png.jpg" width="150"></a>
+
+        <!--<a href="https://github.com/SanduniSamadara/Assignment07Bootstrap">
+            <img alt="Assignment" src="assert/images/assignment 7.jpg" width="100"></a><br><br>-->
+
+        <a href="https://github.com/SanduniSamadara/KIIT">
+            <img alt="Assignment" src="assert/images/assignment8.jpg" width="150"></a><br><br><br><br>
+
+        <!--<a href="https://docs.google.com/document/d/1UFuIV7ddT_yP3u38zCPiG0Bhj9_l05yeEAvYnkqxOL8/edit">
+            <img alt="Assignment" src="assert/images/assignment-glassy-green-round-button-isolated-abstract-illustration-97917632.jpg" width="100"></a><br><br>-->
+
+
+        <input type="button" value="see more">
+    </div>
+
+</section>
+
+
+<section id="contact">
+
+    <h2 id="m9">Contact</h2>
+    <div align="left">
+        <form>
+            <div>
+                <label for="name"></label>
+                <input id="name" name="name" placeholder="Your Name" type="text"> <br><br>
+            </div>
+            <input placeholder="Your Email" type="email"><br><br>
+            <input placeholder="Your Phone number" type="tel"> <br><br>
+            <textarea cols="30" id="message" name="message" placeholder="Your Message......."
+                      rows="10"></textarea><br><br>
+
+        </form>
+    </div>
+
+    <div align="right">
+        <address>
+            <p>
+            <h4>My Address</h4>
+            90,<br>Daladagama,<br>Maho,<br>Kurunegala,<br>Sri Lanka
+            </p>
+            <p>
+            <h4>My Email</h4>
+            <a href="mailto: sandunisamadara391@gmail.com">sandunisamadara391@gmail.com</a><br>
+            <h4>My contact</h4>
+
+            <a href="tel: 0742820784">+94742820784</a>
+
+            </p>
+        </address>
+    </div>
+</section>
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+
+    $(document).ready(() => {
+        setTimeout(() => {
+            $('#preloader').css("display", "none");
+        }, 3000)
+    })
+</script>
+</html>
